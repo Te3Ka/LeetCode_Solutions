@@ -21,6 +21,16 @@ public class TreeNode {
     //TODO: Сделать toString
     @Override
     public String toString() {
-        return "";
+        StringBuilder sb = new StringBuilder();
+        sb.append("[ ");
+        sb.append(val).append(" ");
+        if (left != null) {
+            sb.append(left.toString()).append(" ");
+        }
+        if (right != null) {
+            sb.append(right.toString()).append(" ");
+        }
+        sb.append("]");
+        return sb.toString();
     }
 }

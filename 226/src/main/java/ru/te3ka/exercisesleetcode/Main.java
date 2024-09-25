@@ -23,8 +23,6 @@ public class Main {
                 + treeNode.right.right.val + " ]"
         );
 
-        System.out.println(treeNode);
-
         Solution solution = new Solution();
 
         TreeNode invertTree = solution.invertTree(treeNode);
@@ -37,5 +35,7 @@ public class Main {
                 + invertTree.right.left.val + " "
                 + invertTree.right.right.val + " ]"
         );
+
+        System.out.println(treeNode);
     }
 }
