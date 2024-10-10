@@ -10,15 +10,26 @@
     <packaging>pom</packaging>
     <modules>
         <module>88</module>
+
         <module>226</module>
+
         <module>383</module>
+
         <module>412</module>
         <module>485</module>
+
         <module>876</module>
+
+        <module>977</module>
+
         <module>1295</module>
+
         <module>1342</module>
+
         <module>1480</module>
+
         <module>1672</module>
+
         <module>2235</module>
         <module>2236</module>
     </modules>
