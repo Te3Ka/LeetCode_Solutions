@@ -11,6 +11,7 @@ public class Main977 {
 
         Solution solution = new Solution();
         System.out.println(Arrays.toString(nums));
+//        System.out.println(Arrays.toString(solution.sortedSquaresViaNewArray(nums)));
         System.out.println(Arrays.toString(solution.sortedSquares(nums)));
     }
 }

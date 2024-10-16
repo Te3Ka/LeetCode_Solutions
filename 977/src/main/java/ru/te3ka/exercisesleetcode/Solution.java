@@ -1,7 +1,13 @@
 package ru.te3ka.exercisesleetcode;
 
 public class Solution {
-    public int[] sortedSquares(int[] nums) {
+    /**
+     * Решение через возведение в квадрат и сортировку пузырьком.
+     *
+     * @param nums
+     * @return
+     */
+    public int[] sortedSquaresViaNewArray(int[] nums) {
         for (int i = 0; i < nums.length; i++) {
             nums[i] *= nums[i];
         }
@@ -17,5 +23,35 @@ public class Solution {
             }
         }
         return nums;
+    }
+
+    /**
+     * Решение через сравнение квадратов элементов.
+     *
+     * @param nums
+     * @return
+     */
+    public int[] sortedSquares(int[] nums) {
+        int[] result = new int[nums.length];
+
+        int leftIndex = 0;
+        int rightIndex = nums.length - 1;
+        int mainIndex = nums.length - 1;
+
+        while (leftIndex <= rightIndex) {
+            int leftSquare = nums[leftIndex] * nums[leftIndex];
+            int rightSquare = nums[rightIndex] * nums[rightIndex];
+
+            if (leftSquare > rightSquare) {
+                result[mainIndex] = leftSquare;
+                leftIndex++;
+            } else {
+                result[mainIndex] = rightSquare;
+                rightIndex--;
+            }
+            mainIndex--;
+        }
+
+        return result;
     }
 }
