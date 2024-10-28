@@ -2,36 +2,22 @@ package ru.te3ka.exercisesleetcode;
 
 class Solution {
     public void merge(int[] nums1, int m, int[] nums2, int n) {
-        int res = 0;
-        boolean isChanged = false;
-        int indChanged = 0;
-        for (int i = 0; i < n; i++) {
-            isChanged = false;
-            for (int j = indChanged; j < m + n; j++) {
-
-                if (nums2[i] < nums1[j]) {
-                    res = nums2[i];
-                    nums2[i] = nums1[j];
-                    nums1[j] = res;
-                    if (!isChanged) {
-                        indChanged = j;
-                        isChanged = true;
-                    }
-                } else if (nums1[j] == 0) {
-                    nums1[j] = nums2[i];
-                    nums2[i] = 0;
-                    if (!isChanged) {
-                        indChanged = j;
-                        isChanged = true;
-                    }
-                    break;
-                }
+        int ind = m + n - 1;
+        while (m >= 1 && n >= 1) {
+            if (nums1[m - 1] > nums2[n - 1]) {
+                nums1[ind] = nums1[m - 1];
+                m--;
+            } else {
+                nums1[ind] = nums2[n - 1];
+                n--;
             }
+            ind--;
         }
 
-        for (int num : nums1) {
-            System.out.print(num + " ");
+        while (n >= 1) {
+            nums1[ind] = nums2[n - 1];
+            n--;
+            ind--;
         }
-        System.out.println();
     }
 }

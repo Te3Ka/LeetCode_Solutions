@@ -1,13 +1,13 @@
 package ru.te3ka.exercisesleetcode;
 
-public class Main {
+public class Main88 {
 
     public static void main(String[] args) {
 //        nums1 = [1,2,3,0,0,0], m = 3, nums2 = [2,5,6], n = 3
-//        int m = 3;
-//        int n = 3;
-//        int[] nums1 = {1,2,3,0,0,0};
-//        int[] nums2 = {2,5,6};
+        int m = 3;
+        int n = 3;
+        int[] nums1 = {1,2,3,0,0,0};
+        int[] nums2 = {2,5,6};
 
 //        nums1 = [4,5,6,0,0,0], m = 3, nums2 = [1,2,3], n = 3
 //        int m = 3;
@@ -28,10 +28,16 @@ public class Main {
 //        int[] nums2 = {1};
 
 //        nums1 = [-1,0,0,3,3,3,0,0,0], m = 6, nums2 = [1,2,2], n = 3
-        int m = 6;
-        int n = 3;
-        int[] nums1 = {-1,0,0,3,3,3,0,0,0};
-        int[] nums2 = {1,2,2};
+//        int m = 6;
+//        int n = 3;
+//        int[] nums1 = {-1,0,0,3,3,3,0,0,0};
+//        int[] nums2 = {1,2,2};
+
+//        nums1 = [-1,3,0,0,0,0,0], m = 2, nums2 = [0,0,1,2,3], n = 5
+//        int m = 2;
+//        int n = 5;
+//        int[] nums1 = {-1,3,0,0,0,0,0};
+//        int[] nums2 = {0,0,1,2,3};
 
         Solution solution = new Solution();
         solution.merge(nums1, m, nums2, n);
