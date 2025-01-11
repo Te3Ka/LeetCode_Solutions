@@ -9,6 +9,7 @@
     <version>1.0-SNAPSHOT</version>
     <packaging>pom</packaging>
     <modules>
+        <module>26</module>
         <module>27</module>
         <module>88</module>
 
@@ -35,7 +36,7 @@
 
         <module>2235</module>
         <module>2236</module>
-        <module>26</module>
+        <module>1346</module>
     </modules>
 
     <dependencies>
