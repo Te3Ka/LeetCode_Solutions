@@ -15,19 +15,19 @@
 * Верните _k_.
 
 _"Судья"_ протестирует ваше решение с помощью следующего кода:
+```
+int[] nums = [...];                 // Входной массив
+int val = ...;                      // Значение для удаления
+int[] expectedNums = [...];         // Ожидаемый ответ правильной длины.
+                                    // Он отсортирован без значений, равных val.
+int k = removeElement(nums, val);   // Вызывает вашу реализацию
 
-    int[] nums = [...];                 // Входной массив
-    int val = ...;                      // Значение для удаления
-    int[] expectedNums = [...];         // Ожидаемый ответ правильной длины.
-                                        // Он отсортирован без значений, равных val.
-    int k = removeElement(nums, val);   // Вызывает вашу реализацию
-    
-    assert k == expectedNums.length;
-    sort(nums, 0, k);                   // Сортировка первых k элементов nums
-    for (int i = 0; i < actualLength; i++) {
-        assert nums[i] == expectedNums[i];
-    }
-
+assert k == expectedNums.length;
+sort(nums, 0, k);                   // Сортировка первых k элементов nums
+for (int i = 0; i < actualLength; i++) {
+    assert nums[i] == expectedNums[i];
+}
+```
 Если все утверждения подтвердятся, то ваше решение будет принято.
 
 ## Пример 1:
