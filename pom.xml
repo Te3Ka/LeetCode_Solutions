@@ -22,6 +22,7 @@
 
         <module>876</module>
 
+        <module>941</module>
         <module>977</module>
 
         <module>1089</module>
@@ -29,6 +30,7 @@
         <module>1295</module>
 
         <module>1342</module>
+        <module>1346</module>
 
         <module>1480</module>
 
@@ -36,7 +38,6 @@
 
         <module>2235</module>
         <module>2236</module>
-        <module>1346</module>
     </modules>
 
     <dependencies>
