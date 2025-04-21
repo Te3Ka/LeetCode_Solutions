@@ -5,20 +5,14 @@ public class Solution {
         if (nums.length <= 1)
             return;
 
-        int zeroPosition = -1;
-        int temp = 0;
+        int lastNonZeroElement = 0;
         for (int i = 0; i < nums.length; i++) {
-            if (nums[i] == 0 && zeroPosition == -1) {
-                zeroPosition = i;
-            }
-            if (nums[i] != 0 && nums[zeroPosition] == 0) {
-                temp = nums[i];
-                nums[i] = nums[zeroPosition];
-                nums[zeroPosition] = temp;
-                i = zeroPosition;
-                zeroPosition = -1;
+            if (nums[i] != 0) {
+                int temp = nums[i];
+                nums[i] = nums[lastNonZeroElement];
+                nums[lastNonZeroElement] = temp;
+                lastNonZeroElement++;
             }
         }
-        return;
     }
 }
