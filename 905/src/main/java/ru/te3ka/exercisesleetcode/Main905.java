@@ -1,10 +1,13 @@
 package ru.te3ka.exercisesleetcode;
 
+import java.util.Arrays;
+
 public class Main905 {
     public static void main(String[] args) {
         Solution solution = new Solution();
-        int[] nums = {};
+        int[] nums = {3, 1, 2, 4, 5, 8, 7};
 
-        solution.sortArrayByParity(nums);
+        System.out.println(Arrays.toString(nums));
+        System.out.println(Arrays.toString(solution.sortArrayByParity(nums)));
     }
 }
