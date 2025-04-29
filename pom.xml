@@ -10,6 +10,7 @@
     <packaging>pom</packaging>
     <modules>
         <module>1</module>
+        <module>9</module>
         <module>26</module>
         <module>27</module>
         <module>88</module>
