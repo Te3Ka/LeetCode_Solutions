@@ -1,6 +1,14 @@
 package ru.te3ka.exercisesleetcode;
 
+import java.util.Map;
+
 public class Solution {
+    /**
+     * Решение с заменой элементов.
+     *
+     * @param s - римское число, что есть строка из символов I, V, X, L, C, D, M
+     * @return - целое число в индо-арабском представлении.
+     */
     public int romanToInt(String s) {
         int res = 0;
 
@@ -70,6 +78,31 @@ public class Solution {
                     res += 500;
                 if (romNumbers[i] == 'M')
                     res += 1000;
+            }
+        }
+        return res;
+    }
+
+    /**
+     * Решение через Map
+     *
+     * @param s - римское число, что есть строка из символов I, V, X, L, C, D, M
+     * @return - целое число в индо-арабском представлении.
+     */
+    public int romanToIntMap(String s) {
+        Map<Character, Integer> map = Map.of(
+                'I', 1, 'V', 5, 'X', 10, 'L', 50, 'C', 100, 'D', 500, 'M', 1000
+        );
+        int res = 0;
+
+        for (int i = 0; i < s.length(); i++) {
+            int current = map.get(s.charAt(i));
+            int next = (i + 1 < s.length()) ? map.get(s.charAt(i + 1)) : 0;
+
+            if (current < next) {
+                res -= current;
+            } else {
+                res += current;
             }
         }
         return res;
